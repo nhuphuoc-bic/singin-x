@@ -15,7 +15,7 @@ const Callback: React.FC = () => {
     console.log('state callback', state)
     console.log('oauth_state callback', oauth_state)
     console.log('code callback', code)
-    console.log('code_verifier callback', code_verifier)  
+    console.log('code_verifier callback', code_verifier)
 
     if (code && code_verifier && state === oauth_state) {
       called.current = true;
@@ -28,7 +28,7 @@ const Callback: React.FC = () => {
           provider: "X",
           extra: {
             code_verifier: code_verifier,
-            redirect_uri: 'http://127.0.0.1:3005/callback?provider=X',
+            redirect_uri: 'http://127.0.0.1:3005/callback?provider=x',
           },
           device: {
             application: "BIC_GROUP",
